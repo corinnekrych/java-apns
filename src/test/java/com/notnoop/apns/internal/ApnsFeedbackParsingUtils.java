@@ -7,8 +7,9 @@ import java.util.Map;
 import java.util.Random;
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
+import org.junit.*;
 
-public class ApnsFeedbackParsingUtils {
+@Ignore public class ApnsFeedbackParsingUtils {
     static byte[] pack(byte[]... args) {
         int total = 0;
         for (byte[] arg : args)

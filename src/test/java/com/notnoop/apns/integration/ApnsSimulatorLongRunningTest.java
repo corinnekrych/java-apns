@@ -1,11 +1,11 @@
 package com.notnoop.apns.integration;
 
-import org.junit.Test;
+import org.junit.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @SuppressWarnings("deprecation")
-public class ApnsSimulatorLongRunningTest extends ApnsSimulatorTestBase {
+@Ignore public class ApnsSimulatorLongRunningTest extends ApnsSimulatorTestBase {
 
     final Logger logger = LoggerFactory.getLogger(ApnsSimulatorLongRunningTest.class);
 

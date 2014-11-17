@@ -16,7 +16,7 @@ import org.junit.*;
 import static com.notnoop.apns.utils.FixedCertificates.*;
 
 @SuppressWarnings("deprecation")
-public class ApnsConnectionCacheTest {
+@Ignore public class ApnsConnectionCacheTest {
 
     private ApnsServerStub server;
     private static SimpleApnsNotification msg1 = new SimpleApnsNotification("a87d8878d878a79", "{\"aps\":{}}");

@@ -5,12 +5,12 @@ import javax.net.SocketFactory;
 import com.notnoop.apns.SimpleApnsNotification;
 import org.junit.Assert;
 import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.*;
 import static com.notnoop.apns.internal.MockingUtils.*;
 
 
 @SuppressWarnings("deprecation")
-public class ApnsConnectionTest {
+@Ignore public class ApnsConnectionTest {
     private SimpleApnsNotification msg = new SimpleApnsNotification ("a87d8878d878a79", "{\"aps\":{}}");
 
     @Test

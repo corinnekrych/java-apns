@@ -29,8 +29,9 @@ import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
+import org.junit.*;
 
-public class ApnsSimulatorTestBase {
+@Ignore public class ApnsSimulatorTestBase {
     final Logger logger = LoggerFactory.getLogger(ApnsSimulatorTestBase.class);
 
     private static final String payload = "{\"aps\":{}}";

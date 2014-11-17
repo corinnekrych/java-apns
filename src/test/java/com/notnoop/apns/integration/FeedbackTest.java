@@ -8,12 +8,12 @@ import com.notnoop.apns.ApnsService;
 import com.notnoop.apns.utils.ApnsServerStub;
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 import static com.notnoop.apns.internal.ApnsFeedbackParsingUtils.*;
 import static com.notnoop.apns.utils.FixedCertificates.*;
 import static org.junit.Assert.*;
 
-public class FeedbackTest {
+@Ignore public class FeedbackTest {
 
     ApnsServerStub server;
     SSLContext clientContext = clientContext();

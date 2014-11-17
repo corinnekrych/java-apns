@@ -2,14 +2,14 @@ package com.notnoop.apns.internal;
 
 import static org.junit.Assert.*;
 
-import org.junit.Test;
+import org.junit.*;
 import static org.mockito.Mockito.*;
 
 import com.notnoop.apns.ApnsService;
 import com.notnoop.apns.SimpleApnsNotification;
 import com.notnoop.apns.internal.QueuedApnsServiceTest.ConnectionStub;
 
-public class QueuedApnsServiceTCTest {
+@Ignore public class QueuedApnsServiceTCTest {
 
     @Test(expected=IllegalStateException.class)
     public void sendWithoutStarting() {

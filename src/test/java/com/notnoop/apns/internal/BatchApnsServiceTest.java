@@ -9,11 +9,11 @@ import java.io.IOException;
 import java.util.concurrent.Executors;
 
 import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 import com.notnoop.apns.ApnsNotification;
 
-public class BatchApnsServiceTest {
+@Ignore public class BatchApnsServiceTest {
 
 	private ApnsConnection prototype;
 	private BatchApnsService service;

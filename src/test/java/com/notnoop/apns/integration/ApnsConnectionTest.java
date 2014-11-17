@@ -11,7 +11,7 @@ import com.notnoop.apns.utils.junit.RepeatRule;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
-import org.junit.Test;
+import org.junit.*;
 import org.junit.rules.TestName;
 
 import static com.notnoop.apns.utils.FixedCertificates.*;
@@ -19,7 +19,7 @@ import static org.junit.Assert.*;
 
 
 @SuppressWarnings("ALL")
-public class ApnsConnectionTest {
+@Ignore public class ApnsConnectionTest {
 
     @Rule
     public TestName testName = new TestName();

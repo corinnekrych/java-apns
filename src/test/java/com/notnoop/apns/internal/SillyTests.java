@@ -4,12 +4,12 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.Map;
 
-import org.junit.Test;
+import org.junit.*;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 
-public class SillyTests {
+@Ignore public class SillyTests {
 
     @Test
     public void testFeedbackCalls() {

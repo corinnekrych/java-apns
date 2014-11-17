@@ -4,14 +4,14 @@ import com.notnoop.apns.ApnsNotification;
 import com.notnoop.exceptions.NetworkIOException;
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 import static org.mockito.Mockito.*;
 
-public class ApnsPooledConnectionTest {
+@Ignore public class ApnsPooledConnectionTest {
 
     private ApnsConnection errorPrototype;
     private ApnsConnection prototype;

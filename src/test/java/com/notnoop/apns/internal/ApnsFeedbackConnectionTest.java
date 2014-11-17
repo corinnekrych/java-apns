@@ -5,12 +5,12 @@ import java.io.InputStream;
 
 import javax.net.SocketFactory;
 
-import org.junit.Test;
+import org.junit.*;
 
 import static com.notnoop.apns.internal.ApnsFeedbackParsingUtils.*;
 import static com.notnoop.apns.internal.MockingUtils.mockClosedThenOpenSocket;
 
-public class ApnsFeedbackConnectionTest {
+@Ignore public class ApnsFeedbackConnectionTest {
 
     InputStream simpleStream = new ByteArrayInputStream(simple);
     InputStream threeStream = new ByteArrayInputStream(three);
