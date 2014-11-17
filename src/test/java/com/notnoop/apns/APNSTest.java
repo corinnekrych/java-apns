@@ -31,7 +31,7 @@ public class APNSTest {
     public void MY_TEST_FOR_WRONG_CERTFIFICATE() {
 ApnsService service =
     APNS.newService()
-        .withCert("/Users/corinne/Documents/UPS_Documents/Certificates_Prod.p12", "password")
+        .withCert("/Users/corinne/Documents/UPS_Documents/Certificates_Prod.p12", "XXXX")
         .withProductionDestination()
         .withDelegate(new ApnsDelegate() {
             @Override
@@ -65,7 +65,7 @@ ApnsService service =
 String payload = APNS.newPayload().alertBody("YU NO MESSAGE???").build();
 ArrayList<String> mixedTokens = new ArrayList();
 mixedTokens.add("54668ba370d79ad065de03d02627e8d035b2ce499ce5322fd1041de6c6c3d254");
-mixedTokens.add("9d860e6ec706611db76afb419cee897ffb3af1317b8b90ded4196c9044e4087e");
+//mixedTokens.add("9d860e6ec706611db76afb419cee897ffb3af1317b8b90ded4196c9044e4087e");
 
 service.push(mixedTokens, payload);    
 
