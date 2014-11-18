@@ -1,6 +1,6 @@
 package com.notnoop.apns;
 
-import org.junit.Test;
+import org.junit.*;
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import java.util.ArrayList; 
@@ -28,7 +28,7 @@ public class APNSTest {
 
 
     @Test
-    public void MY_TEST_FOR_ONE_DEVICE_WITH_CORRECT_CERTFIFICATE() {
+    @Ignore public void MY_TEST_FOR_ONE_DEVICE_WITH_CORRECT_CERTFIFICATE() {
 ApnsService service =
     APNS.newService()
         .withCert("/Users/corinne/Documents/UPS_Documents/Certificates_Prod.p12", "password")
@@ -62,19 +62,19 @@ ApnsService service =
         .build();
 
 
-        String payload = APNS.newPayload().alertBody("1. with ONE VALID sep test").build();
+        String payload = APNS.newPayload().alertBody("1.").build();
         ArrayList<String> mixedTokens = new ArrayList();
         //correct device
         mixedTokens.add("9d860e6ec706611db76afb419cee897ffb3af1317b8b90ded4196c9044e4087e");
 
         service.push(mixedTokens, payload);   
 
-        String payload2 = APNS.newPayload().alertBody("1. with BOTH IN FIRST TEST").build();
-        ArrayList<String> mixedTokens2 = new ArrayList();
-        mixedTokens2.add("54668ba370d79ad065de03d02627e8d035b2ce499ce5322fd1041de6c6c3d254");
-        mixedTokens2.add("9d860e6ec706611db76afb419cee897ffb3af1317b8b90ded4196c9044e4087e");
+        // String payload2 = APNS.newPayload().alertBody("1. with BOTH IN FIRST TEST").build();
+        // ArrayList<String> mixedTokens2 = new ArrayList();
+        // mixedTokens2.add("54668ba370d79ad065de03d02627e8d035b2ce499ce5322fd1041de6c6c3d254");
+        // mixedTokens2.add("9d860e6ec706611db76afb419cee897ffb3af1317b8b90ded4196c9044e4087e");
 
-        service.push(mixedTokens2, payload2); 
+        // service.push(mixedTokens2, payload2); 
 
 
     }
@@ -115,7 +115,7 @@ ApnsService service =
 
 
 
-        String payload2 = APNS.newPayload().alertBody("2. with BOTH, sep test").build();
+        String payload2 = APNS.newPayload().alertBody("2.").build();
         ArrayList<String> mixedTokens2 = new ArrayList();
         mixedTokens2.add("54668ba370d79ad065de03d02627e8d035b2ce499ce5322fd1041de6c6c3d254");
         mixedTokens2.add("9d860e6ec706611db76afb419cee897ffb3af1317b8b90ded4196c9044e4087e");
