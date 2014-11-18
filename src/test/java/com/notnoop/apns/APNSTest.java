@@ -31,7 +31,7 @@ public class APNSTest {
     public void MY_TEST_FOR_WRONG_CERTFIFICATE() {
 ApnsService service =
     APNS.newService()
-        .withCert("/Users/corinne/Documents/UPS_Documents/Certificates_Prod.p12", "XXXX")
+        .withCert("/Users/corinne/Documents/UPS_Documents/Certificates_Prod.p12", "XXX")
         .withProductionDestination()
         .withDelegate(new ApnsDelegate() {
             @Override
@@ -62,12 +62,20 @@ ApnsService service =
         .build();
 
 
-String payload = APNS.newPayload().alertBody("YU NO MESSAGE???").build();
+String payload = APNS.newPayload().alertBody("with ONE VALID.....RECEIVED").build();
 ArrayList<String> mixedTokens = new ArrayList();
-mixedTokens.add("54668ba370d79ad065de03d02627e8d035b2ce499ce5322fd1041de6c6c3d254");
-//mixedTokens.add("9d860e6ec706611db76afb419cee897ffb3af1317b8b90ded4196c9044e4087e");
+//mixedTokens.add("54668ba370d79ad065de03d02627e8d035b2ce499ce5322fd1041de6c6c3d254");
+mixedTokens.add("9d860e6ec706611db76afb419cee897ffb3af1317b8b90ded4196c9044e4087e");
 
-service.push(mixedTokens, payload);    
+service.push(mixedTokens, payload);   
+
+
+String payload2 = APNS.newPayload().alertBody("with BOTH.....NOT RECEIVED").build();
+ArrayList<String> mixedTokens2 = new ArrayList();
+mixedTokens2.add("54668ba370d79ad065de03d02627e8d035b2ce499ce5322fd1041de6c6c3d254");
+mixedTokens2.add("9d860e6ec706611db76afb419cee897ffb3af1317b8b90ded4196c9044e4087e");
+
+service.push(mixedTokens2, payload2);    
 
 }
 }
